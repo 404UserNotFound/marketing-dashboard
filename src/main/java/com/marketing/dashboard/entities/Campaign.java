@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name="campaign")
+@Table(name = "campaign")
 public class Campaign {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,6 +14,8 @@ public class Campaign {
     private String campaignDescription;
     private String campaignStatus;
     private Double campaignBudget;
+    private String campaignStartDate;
+    private String campaignEndDate;
 
     @OneToMany(mappedBy = "campaign")
     private List<CampaignChannel> campaignChannels;
@@ -22,11 +24,20 @@ public class Campaign {
 
     }
 
-    public Campaign(String campaignName, String campaignDescription, String campaignStatus, Double campaignBudget) {
+    public Campaign(
+            String campaignName,
+            String campaignDescription,
+            String campaignStatus,
+            Double campaignBudget,
+            String campaignStartDate,
+            String campaignEndDate
+    ) {
         this.campaignName = campaignName;
         this.campaignDescription = campaignDescription;
         this.campaignStatus = campaignStatus;
         this.campaignBudget = campaignBudget;
+        this.campaignStartDate = campaignStartDate;
+        this.campaignEndDate = campaignEndDate;
     }
 
     public Long getCampaignId() {
@@ -69,4 +80,19 @@ public class Campaign {
         this.campaignBudget = campaignBudget;
     }
 
+    public String getCampaignStartDate() {
+        return campaignStartDate;
+    }
+
+    public void setCampaignStartDate(String campaignStartDate) {
+        this.campaignStartDate = campaignStartDate;
+    }
+
+    public String getCampaignEndDate() {
+        return campaignEndDate;
+    }
+
+    public void setCampaignEndDate(String campaignEndDate) {
+        this.campaignEndDate = campaignEndDate;
+    }
 }

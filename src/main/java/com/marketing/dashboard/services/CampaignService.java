@@ -33,6 +33,8 @@ public class CampaignService {
             existingCampaign.setCampaignDescription(campaign.getCampaignDescription());
             existingCampaign.setCampaignStatus(campaign.getCampaignStatus());
             existingCampaign.setCampaignBudget(campaign.getCampaignBudget());
+            existingCampaign.setCampaignStartDate(campaign.getCampaignStartDate());
+            existingCampaign.setCampaignEndDate(campaign.getCampaignEndDate());
             return campaignRepository.save(existingCampaign);
         } else {
             return null;
