@@ -80,6 +80,10 @@ public class Campaign {
         this.campaignBudget = campaignBudget;
     }
 
+    public Long getId() {
+        return campaignId;
+    }
+
     public String getCampaignStartDate() {
         return campaignStartDate;
     }
