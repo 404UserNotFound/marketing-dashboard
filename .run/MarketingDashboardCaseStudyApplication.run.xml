@@ -1,6 +1,5 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="MarketingDashboardCaseStudyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-    <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
     <module name="marketing-dashboard" />
     <option name="SPRING_BOOT_MAIN_CLASS" value="com.marketing.dashboard.MarketingDashboardCaseStudyApplication" />
     <method v="2">
